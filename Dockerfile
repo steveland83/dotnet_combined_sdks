@@ -26,7 +26,7 @@ RUN wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor >
 
 # Install legacy dotnet 3.1 sdk
 RUN apt-get update \
-    && apt-get install dotnet-sdk-3.1
+    && apt-get install dotnet-sdk-3.1 -y
 
 RUN dotnet new console -f netcoreapp3.1
 
